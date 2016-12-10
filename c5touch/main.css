@@ -1,0 +1,311 @@
+/* @override 
+	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
+	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style-compressed.css
+*/
+
+/*  
+Theme Name: WPtouch Mobile Plugin & Theme For WordPress
+Theme URI: http://www.bravenewcode.com/wptouch/
+Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone, iPod touch, or Android Mobile Device
+Author: Dale Mugford and Duane Storey
+Author URI: http://www.bravenewcode.com/
+	
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* @group Body and Theme-Wide Elements */
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 14px Helvetica;
+	-webkit-text-size-adjust: none;
+	min-height: 460px;
+}
+
+ul {
+	margin: 0;
+	padding: 0 20px 0 20px;
+	list-style-type: circle;
+	list-style-position: outside;
+}
+
+ol {
+	margin: 0;
+	padding: 0 25px 0 20px;
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+
+li {
+	line-height: 17px;
+	font-size: 12px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	color: #555;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	max-width: 96%;
+}
+
+iframe {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+code {
+	font-family: Courier, "Courier New", mono;
+	color: red;
+}
+
+blockquote {
+	-webkit-border-radius: 10px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	font-size: 12px;
+	background: #eee url(images/quotes.png) no-repeat right -2px;
+	text-align: left;
+	margin: 5px 1px;
+}
+
+.clearer {
+	clear: both;
+}
+
+.content {
+	margin-top: 15px;
+	position: relative;
+}
+
+/* @end */
+
+/* moved from include */
+
+h1 {
+	margin: 0;
+	overflow: hidden;
+	font-family: "Helvetica Neue", Helvetica;
+	font-weight: bold;
+	color: #2d2d2d;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+div.ccm-page-list-description {margin-bottom: 20px}
+h3 {color: #444; margin-bottom: 4px; line-height: 18px; font-size: 16px}
+div.ccm-page-list-date {margin-bottom: 4px; font-weight: bold; color: #444}
+div.ccm-page-list-item {line-height: 16px}
+img.section-image {display: none}
+
+div.ccm-jereme-tweetcrete-date, div.ccm-page-list-categories {-webkit-border-radius: 4px; border: 2px solid rgba(100,100,100,0.2); margin-top: 4px; padding: 4px; font-size: 12px; background-color: rgba(240,240,240,0.8)}
+#headerbar, #header-search {
+	background: #000 url(images/head-fade-bk.png);
+}
+
+div.search-wrapper {
+	margin: 12px 14px 0px 12px;
+}
+
+div.search-wrapper form {
+	width: 100%;
+}
+
+div.search-wrapper form input {
+	background-color: #fff; color: #333;
+	border: 1px solid #666;
+	font-size: 16px;
+	width: 100%;
+}
+
+#headerbar-title, #headerbar-title a {
+	color: #ffffff;
+}
+
+a, h3#com-head {
+	color: #0A7199;
+}
+
+a.h2, a.sh2, .page h2 {
+font-family: #686868;
+}
+
+
+
+/* @group Header */
+
+#headerbar {
+	width: 100%;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: 45px;
+	border-bottom: 1px solid #1e1e1e;
+	font-size: 19px;
+}
+
+#headerbar-title {
+	text-shadow: #242424 -1px -1px 1px;
+	padding-top: 10px;
+	padding-left: 10px;
+	display: block;
+	margin: 0;
+	border-style: none;
+	padding-bottom: 4px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 85%;
+	font-weight: bold;
+	height: 29px;
+}
+
+#headerbar-title a {
+	text-decoration: none;
+	letter-spacing: -1px;
+	position: relative;
+	font-family: HelveticaNeue-Bold, sans-serif;
+}
+
+#headerbar-title img#logo-icon {
+	position: relative;
+	margin-right: 7px;
+	max-width: 30px;
+	float: left;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	bottom: 1px;
+}
+
+
+.post {
+	-webkit-border-radius: 8px;
+	background-color: #fff;
+	padding: 10px;
+	margin-bottom: 12px;
+	line-height: 18px;
+	position: relative;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: 1px solid #b1b1b1;
+}
+
+.big {
+	height: 200px;
+}
+
+a.post-arrow {
+	width: 18px;
+	height: 15px;
+	float: right;
+	margin-top: 1px;
+	padding: 0;
+	background: #f4f4f4 url(images/post-arrow.png) no-repeat center 5px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 5px;
+	-webkit-transform: scale(1.0) rotate(0deg);
+	-webkit-transition-duration: 0.6s;
+}
+
+a.post-arrow-down {
+	-webkit-transform: scale(1.0) rotate(180deg);
+	-webkit-transition-duration: 0.6s;
+	background: #dfe3e3 url(images/post-arrow.png) no-repeat center -14px;
+	border: 1px solid #b8b8b8;
+}
+
+a.h2 {
+	color: #222;
+	text-decoration: none;
+	display: block;
+	margin-top: 2px;
+	text-align: left;
+	width: 93%;
+	letter-spacing: -1px;
+	margin-bottom: 4px;
+	line-height: 15px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mainentry {
+	color: #444;
+	line-height: 145%;
+	display: block;
+}
+
+.mainentry p {
+	margin: 2% 0 1%;
+	padding: 0;
+}
+
+.mainentry a.read-more {
+	display: block;
+	padding-top: 10px;
+	border-top: 1px solid #c1c1c1;
+	position: relative;
+	padding-left: 10px;
+	color: #222;
+	font-weight: bold;
+	background: url(images/arrow.png) no-repeat right 7px;
+	padding-bottom: 10px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	margin: 10px -10px -10px;
+}
+
+.mainentry a.read-more:hover {
+	background-color: #dcdcdc;
+}
+
+.mainentry li {
+	border-bottom-style: dashed;
+}
+
+
+.classic-wptouch-bg {
+	background: url(images/pinstripes-classic.gif) repeat;
+}
+
+.argyle-wptouch-bg {
+	background: url(images/argyle-tie.gif) repeat;
+}
+
+.horizontal-wptouch-bg {
+	background: url(images/pinstripes-horizontal.gif) repeat;
+}
+
+.diagonal-wptouch-bg {
+	background: url(images/pinstripes-diagonal.gif) repeat;
+}
+
+.skated-wptouch-bg {
+	background: url(images/skated-concrete.gif) repeat;
+}
+
+.grid-wptouch-bg {
+	background: url(images/grid.gif) repeat;
+}
+
+#footer {
+	text-align: center;
+	color: #475d79;
+	font-size: 10px;
+	font-weight: bold;
+	text-shadow: #eee 1px 1px 0;
+	margin-top: 60px;
+	line-height: 13px;
+	padding: 0 0 10px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0 25px 5px;
+}
+

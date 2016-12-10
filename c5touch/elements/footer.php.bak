@@ -1,0 +1,19 @@
+<? defined('C5_EXECUTE') or die(_("Access Denied.")); ?>
+
+<div class="search-wrapper">
+	<a name="footersearch"></a>
+	<form method="get" action="<?=$this->url('/search')?>">
+		<input type="text" name="query" class="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" />
+	</form>
+</div>
+
+<div id="footer">
+	<p><?=t('&copy %s %s', date('Y'), SITE)?></p>
+	<p><?=t('Powered by ')?><a href="http://www.andrewembler.com/concrete5/c5touch/"><?=t('c5touch')?></a><?=t(', based on ')?><a href="http://www.bravenewcode.com/wptouch/"><?=t('wptouch')?></a><?=t('(originally for Wordpress).')?></p>
+</div>
+
+
+<? Loader::element('footer_required'); ?>
+
+</body>
+</html>
