@@ -1,0 +1,7 @@
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\bin\Debug\CPUGrab.NET.exe
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\bin\Debug\CPUGrab.NET.pdb
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\obj\x86\Debug\CPUGrab.NET.Form1.resources
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\obj\x86\Debug\CPUGrab.NET.Properties.Resources.resources
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\obj\x86\Debug\CPUGrab.NET.csproj.GenerateResource.Cache
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\obj\x86\Debug\CPUGrab.NET.exe
+C:\Development\Windows\Utilities\CPUGrab.NET\CPUGrab.NET\obj\x86\Debug\CPUGrab.NET.pdb
