@@ -1,0 +1,7 @@
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\bin\Release\crypto.dll
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\bin\Release\crypto.xml
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\bin\Release\nunit.core.dll
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\bin\Release\nunit.core.interfaces.dll
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\bin\Release\nunit.framework.dll
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\obj\Release\crypto.csprojResolveAssemblyReference.cache
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\ThirdParty\crypto\obj\Release\crypto.dll

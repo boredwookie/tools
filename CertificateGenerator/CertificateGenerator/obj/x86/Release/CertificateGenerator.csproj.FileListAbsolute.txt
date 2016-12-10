@@ -1,0 +1,8 @@
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\bin\Release\CertificateGenerator.exe
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\bin\Release\CertificateGenerator.pdb
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\obj\x86\Release\CertificateGenerator.CertGeneratorFormMain.resources
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\obj\x86\Release\CertificateGenerator.Properties.Resources.resources
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\obj\x86\Release\CertificateGenerator.csproj.GenerateResource.Cache
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\obj\x86\Release\CertificateGenerator.exe
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\obj\x86\Release\CertificateGenerator.pdb
+C:\Source\Desktop_Apps\CertificateGenerator\CertificateGenerator\bin\Release\CertificateGenerator.exe.config

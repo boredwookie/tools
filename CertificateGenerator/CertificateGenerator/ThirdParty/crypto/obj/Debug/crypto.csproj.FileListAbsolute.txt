@@ -1,0 +1,9 @@
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\obj\Debug\crypto.csprojResolveAssemblyReference.cache
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\bin\Debug\crypto.dll
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\bin\Debug\crypto.pdb
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\bin\Debug\crypto.xml
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\bin\Debug\nunit.core.dll
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\bin\Debug\nunit.core.interfaces.dll
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\bin\Debug\nunit.framework.dll
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\obj\Debug\crypto.dll
+C:\Users\rion\Downloads\bccrypto-net-1.7-src\csharp\crypto\obj\Debug\crypto.pdb
