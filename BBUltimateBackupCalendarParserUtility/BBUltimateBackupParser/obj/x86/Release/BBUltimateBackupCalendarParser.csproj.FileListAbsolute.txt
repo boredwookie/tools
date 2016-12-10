@@ -1,0 +1,10 @@
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\bin\Release\BBUltimateBackupParser.exe
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\bin\Release\Ionic.Zip.Reduced.dll
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\bin\Release\BBUltimateBackupParser.pdb
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\bin\Release\Ionic.Zip.Reduced.pdb
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\bin\Release\Ionic.Zip.Reduced.xml
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\obj\x86\Release\BBUltimateBackupParser.FormMain.resources
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\obj\x86\Release\BBUltimateBackupParser.Properties.Resources.resources
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\obj\x86\Release\BBUltimateBackupCalendarParser.csproj.GenerateResource.Cache
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\obj\x86\Release\BBUltimateBackupParser.exe
+C:\Users\rion\Stashdot\Projects\CSharp\BBUltimateBackupParser\BBUltimateBackupParser\obj\x86\Release\BBUltimateBackupParser.pdb
