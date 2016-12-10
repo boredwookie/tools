@@ -1,0 +1,15 @@
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\AvailableAgility.dll
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\AvailableAgility.pdb
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\AvailableAgility.dll.manifest
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\AvailableAgility.vsto
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.xml
+C:\Repos\Personal\AvailableAgility\AvailableAgility\obj\Debug\AvailableAgility.AvailableAgilitySettingsForm.resources
+C:\Repos\Personal\AvailableAgility\AvailableAgility\obj\Debug\AvailableAgility.Properties.Resources.resources
+C:\Repos\Personal\AvailableAgility\AvailableAgility\obj\Debug\AvailableAgility.csproj.GenerateResource.Cache
+C:\Repos\Personal\AvailableAgility\AvailableAgility\obj\Debug\AvailableAgility.dll
+C:\Repos\Personal\AvailableAgility\AvailableAgility\obj\Debug\AvailableAgility.pdb
+C:\Repos\Personal\AvailableAgility\AvailableAgility\obj\Debug\AvailableAgility.csprojResolveAssemblyReference.cache
+C:\Repos\Personal\AvailableAgility\AvailableAgility\bin\Debug\AvailableAgility.XML

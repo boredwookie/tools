@@ -1,0 +1,1 @@
+C:\Repos\Personal\AvailableAgility\Publish>mage -sign AvailableAgility.vsto -certfile ..\AvailableAgility\AvailableAgility_TemporaryKey.pfx

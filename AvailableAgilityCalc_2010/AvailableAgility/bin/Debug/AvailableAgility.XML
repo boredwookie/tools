@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AvailableAgility</name>
+    </assembly>
+    <members>
+        <member name="F:AvailableAgility.AgileCalculator.WorkdayBegin">
+            <summary>
+            Stores the time that the work day begins (user configurable setting in Outlook)
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AgileCalculator.WorkdayEnd">
+            <summary>
+            Stores the time that the work day ends (user configurable setting in Outlook)
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AgileCalculator.LunchTimeStart">
+            <summary>
+            Time that lunch starts each day (this should not be included as available time in sprint planning, but don't double dip if there is already an appointment over lunch!)
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AgileCalculator.LunchTimeEnd">
+            <summary>
+            When does Lunch End?
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AgileCalculator.IncludeFragmentedTime">
+            <summary>
+            If we want to include small fragments of time as 'available', set this to true
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AgileCalculator.MinimumUsableGapMins">
+            <summary>
+            If we are not including fragmented time, this stores how many minutes a gap needs to be before it is considered to be a usable gap
+            </summary>
+        </member>
+        <member name="M:AvailableAgility.AgileCalculator.SetLunchDetails(System.DateTime,System.DateTime)">
+            <summary>
+            Set the lunch details so we can take it into account when calculating available time
+            </summary>
+            <param name="lunchStart"></param>
+            <param name="lunchEnd"></param>
+        </member>
+        <member name="M:AvailableAgility.AgileCalculator.SetFragmentationDetails(System.Boolean,System.Int32)">
+            <summary>
+            Configure the Fragmentation time details
+            </summary>
+            <param name="includeFragmentedTime"></param>
+            <param name="minimumUsableGapMins"></param>
+        </member>
+        <member name="M:AvailableAgility.AgileCalculator.CalculateAvailability(System.DateTime,System.DateTime)">
+            <summary>
+            Calculates the used and available time from the Outlook Calendar. Assumes 8 hours equals a work day
+            </summary>
+            <param name="DateStart"></param>
+            <param name="DateStop"></param>
+            <returns>A tuple with calculated information</returns>
+        </member>
+        <member name="M:AvailableAgility.AgileCalculator.TallyTime(Microsoft.Office.Interop.Outlook.Items,System.Int32)">
+            <summary>
+            Filter out calendar appointments that are more reminders and tallies the total occupied time
+            </summary>
+            <param name="calItems">From the outlook interop: This is all the cal items we're working with here</param>
+            <param name="i">Current index of where we're at</param>
+            <returns>Tuple with Scheduled Time, Fragmented Time and Lunch Overlap Time (all in MINUTES)</returns>
+        </member>
+        <member name="M:AvailableAgility.AgileCalculator.TallyTime(Microsoft.Office.Interop.Outlook.AppointmentItem,Microsoft.Office.Interop.Outlook.AppointmentItem)">
+            <summary>
+            Had to create another method here to accomodate the recurring meetings
+            </summary>
+            <param name="CalItem"></param>
+            <param name="prevCalItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AvailableAgility.AgileCalculator.GetOutlookSettings">
+            <summary>
+            Gets the User Configurable 'WorkDay' settings
+            </summary>
+        </member>
+        <member name="T:AvailableAgility.AvailableAgilityAddIn">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.#ctor(Microsoft.Office.Tools.Outlook.Factory,System.IServiceProvider)">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.Initialize">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.FinishInitialization">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.InitializeDataBindings">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.InitializeCachedData">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.InitializeData">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.BindToData">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.StartCaching(System.String)">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.StopCaching(System.String)">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.IsCached(System.String)">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.BeginInitialization">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.EndInitialization">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.InitializeControls">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.InitializeComponents">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.NeedsFill(System.String)">
+            
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.OnShutdown">
+            
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilityAddIn.Calculator">
+            <summary>
+            This performs the time calculation functions
+            </summary>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.SettingsBtn_Click(Microsoft.Office.Core.CommandBarButton,System.Boolean@)">
+            <summary>
+            Lets user make changes to the Settings form
+            </summary>
+            <param name="Ctrl"></param>
+            <param name="CancelDefault"></param>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.LoadSettings">
+            <summary>
+            Gets the user settings from the settings form (defaults if no changes have been made by the user
+            </summary>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilityAddIn.InternalStartup">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:AvailableAgility.Globals">
+            
+        </member>
+        <member name="M:AvailableAgility.Globals.#ctor">
+            
+        </member>
+        <member name="T:AvailableAgility.ThisRibbonCollection">
+            
+        </member>
+        <member name="M:AvailableAgility.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+            
+        </member>
+        <member name="T:AvailableAgility.ThisFormRegionCollection">
+            
+        </member>
+        <member name="M:AvailableAgility.ThisFormRegionCollection.#ctor(System.Collections.Generic.IList{Microsoft.Office.Tools.Outlook.IFormRegion})">
+            
+        </member>
+        <member name="T:AvailableAgility.WindowFormRegionCollection">
+            
+        </member>
+        <member name="M:AvailableAgility.WindowFormRegionCollection.#ctor(System.Collections.Generic.IList{Microsoft.Office.Tools.Outlook.IFormRegion})">
+            
+        </member>
+        <member name="T:AvailableAgility.AvailableAgilitySettingsForm">
+            <summary>
+            Form which allows users to configure the Agility calculator's settings
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilitySettingsForm.LunchStartTime">
+            <summary>
+            User-configurable 'Lunch Time' start time which should always be excluded from agile estimates
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilitySettingsForm.LunchEndTime">
+            <summary>
+            When does lunch end?
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilitySettingsForm.IncludeFragmentedTime">
+            <summary>
+            Let the user choose if they want to include chunks of free time less than 30 minutes in their estimates
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilitySettingsForm.MinimumUsableGapMins">
+            <summary>
+            Stores how many minutes are the minimum-usable. Anything below this number of minutes will not be counted as 'available' time
+            </summary>
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilitySettingsForm.DaysToCalculate">
+            <summary>
+            How many days from NOW should we include in our calculationS
+            </summary>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilitySettingsForm.#ctor">
+            <summary>
+            Initializes a new Form which lets you configure the Agile calculation settings
+            </summary>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilitySettingsForm.uxSaveAgilityBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            Save the user defined settings to the Form properties so they can be read by the other pieces of the Outlook plugin
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilitySettingsForm.uxFragmentEstimatesChkBx_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Controls what Fragmentation settings are visible
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:AvailableAgility.AvailableAgilitySettingsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilitySettingsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AvailableAgility.AvailableAgilitySettingsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:AvailableAgility.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AvailableAgility.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AvailableAgility.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
