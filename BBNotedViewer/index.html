@@ -1,0 +1,143 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BB Noted Viewer</title>
+  <link rel="stylesheet" href="deps/jquery-ui.css">
+
+  <!-- Insert this line above script imports  -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script type="text/javascript" src="deps/external/jquery/jquery.js"></script>
+  <script src="deps/jquery-ui.js"></script>
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js');
+
+    var fs = require('fs');
+    var sql = require('sql.js');
+
+    function openNotedDatabase(path_to_db){
+      var exists = fs.existsSync(path_to_db);
+      if(!exists){
+        return "failed_to_open_db";
+      }
+      var dbf = fs.readFileSync(path_to_db);
+      var db = new sql.Database(dbf);
+
+      return db;
+    }
+  </script>
+
+  <style>
+  #categories .ui-selecting { background: #FECA40; }
+  #categories .ui-selected { background: #F39814; color: white; }
+  #categories { list-style-type: none; margin: 0; padding: 0; width: 150px; }
+  #categories li { margin: 3px; padding: 0.4em; font-size: 0.75em; height: 18px; }
+
+  ##noteList .ui-selecting { background: #FECA40; }
+  #noteList .ui-selected { background: #F39814; color: white; }
+  #noteList { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #noteList li { margin: 3px; padding: 0.4em; font-size: 0.75em; height: 36px; }
+
+  </style>
+  <script>
+  var selectedCategory = '';
+  //
+  // Setup catetories and notes so they can be clicked on
+  $( function() {
+  $( "#categories" ).selectable({selected: function(event, ui){
+      //console.log(ui.selected.innerText);
+      loadNotes(ui.selected.innerText);
+    }
+  });
+
+  $( "#noteList" ).selectable({selected: function(event, ui){
+      //console.log(ui.selected.innerText);
+      loadNote(selectedCategory, ui.selected.innerText);
+    }
+  });
+} );
+  </script>
+</head>
+<body>
+  <div style="width:98%">
+    <div style="float: left;">
+      <div style="width:150px">
+        <fieldset>
+          <legend>Select a Noted '.nbak' file to load</legend>
+          <form>
+            <input id="sqliteInput" type="file"  class="ui-button ui-widget ui-corner-all"/>
+            <input id="processBtn" class="ui-button ui-widget ui-corner-all" type="button" value="Open" onclick="openSelectedDatabase(document.getElementById('sqliteInput').files[0].path)"/>
+          </form>
+        </fieldset>
+      </div>
+      <br>
+      <div style="width:100%;">
+        <div id="categoriesDiv" style="float: left; max-width: 150px;">
+          <span><strong>Categories</strong></span>
+          <ol id="categories">
+          </ol>
+        </div>
+        <div id="noteListDiv" style="float: left; max-width:200px;">
+          <span><strong>&nbsp;Notes</strong></span>
+          <ol id="noteList">
+          </ol>
+        </div>
+        <br style="clear: left;" />
+      </div>
+    </div>
+    <div id="noteContentDiv" style="margin-left: 25px; float: left; min-width:400px; width: 50%; border-left: 2px solid black; padding-left: 5px; display: none;">
+      <span id="noteTitle"></span>
+      <pre id="noteContent" style="white-space: pre-wrap;">
+      </pre>
+    </div>
+  </div>
+  <script>
+    // Instantiate the noted Database
+    var db = null;
+    function openSelectedDatabase(path_to_db){
+      db = openNotedDatabase(path_to_db);
+
+      // Load the note categories
+      var categories = $('#categories');
+      db.each("select distinct noteType from note", function(row, err){
+        categories.append('<li class="ui-widget-content">' + row.noteType + '</li>')
+      });
+    }
+
+    // Load notes in the selected category
+    var noteList = $('#noteList');
+    var noteContent = $('#noteContent');
+    function loadNotes(category){
+      selectedCategory = category;
+      noteList.empty();
+      noteContent.empty();
+
+      db.each("select * from note where noteType = '" + category + "'", function(row, err){
+        noteList.append('<li class="ui-widget-content" style="word-wrap: break-word;">' + row.noteTitle + '</li>')
+      });
+    }
+
+    // Load note into main view
+    var noteContentDiv = $('#noteContentDiv');
+    var noteContent = $('#noteContent');
+    function loadNote(category, noteTitle){
+      noteContentDiv.show();
+      noteContent.empty();
+
+      var noteData = db.exec("select * from note where noteType = '" + category + "' and noteTitle = '" + noteTitle + "'")
+      //console.log(noteData[0].values[0][2])
+
+      // Set the note title
+      var noteTitleSpan = $('#noteTitle');
+      noteTitleSpan.html(noteTitle);
+
+      // Set the note content
+      noteContent.append(noteData[0].values[0][2]);
+    }
+  </script>
+
+</body>
+</html>

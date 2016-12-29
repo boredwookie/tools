@@ -1,0 +1,23 @@
+{
+  "name": "bb-noted-viewer",
+  "version": "1.0.0",
+  "description": "Make use of your Noted notes on your desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --all"
+  },
+  "repository": "https://github.com/boredwookie/boredwookie-tools",
+  "keywords": [
+    "BlackBerry",
+    "Noted"
+  ],
+  "author": "Rion Carter",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "electron-packager": "^8.4.0",
+    "shelljs": "^0.7.5",
+    "sql.js": "^0.4.0"
+  }
+}
