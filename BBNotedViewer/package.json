@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --all"
+    "build": "electron-packager . --all --no-prune"
   },
   "repository": "https://github.com/boredwookie/boredwookie-tools",
   "keywords": [
