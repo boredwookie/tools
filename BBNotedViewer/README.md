@@ -12,10 +12,10 @@ This is currently a WIP
 # So, how do I 'run' this?
 If 'electron' delivers as advertised, you should be able to pick the appropriate 'bb-noted-viewer-PLATFORM' that corresponds to your operating system from the RELEASE directory. Translation matrix:
 - mas-x64 == Mac OS
-- win32-x64 == 64bit windows
 - win32-ia32 == 32bit windows
 - linux-x64 == 64bit linux
-- linux-ia32 == 32bit linux
+
+* Want one of the other platforms supported by Electron? Setup an Electron.io build environment and execute 'npm run build' from the BBNotedViewer directory
 
 Open the 'bb-noted-viewer' executable per your operating systems normal procedure (double click on Mac and Windows, ./bb-noted-viewer for linux)
 
