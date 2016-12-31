@@ -1,0 +1,1 @@
+Released under the terms of the GPL-3.0 License
