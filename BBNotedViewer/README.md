@@ -1,7 +1,7 @@
 # About
 When I rocked a BlackBerry 10 device I used this note application called 'Noted'. It was an awesome app that let me easily keep track of my notes. Unfortunately BlackBerry has stopped making awesome BB OS 10 devices and I have had to migrate to Android. This tool is meant to let me access the notes that I exported from the Noted application.
 
-This is currently a WIP
+There are 2 versions of this tool: one version written in Qt and the other in Electron
 
 # How to use
 - Export an NBAK file from within the Noted application
@@ -10,12 +10,16 @@ This is currently a WIP
 - Explore your notes
 
 # So, how do I 'run' this?
-If 'electron' delivers as advertised, you should be able to pick the appropriate 'bb-noted-viewer-PLATFORM' that corresponds to your operating system from the RELEASE directory. Translation matrix:
+The quickest and best experience is to pull a relevant zip file from the RELEASE/QT directory as corresponds to your platform. All the dependencies are included so you should be able to execute either the *.exe* or *.sh* and have it run on your system.
+
+If you want to try the rougher 'electron' version (and if the electron framework delivers as expected), you should be able to pick the appropriate 'bb-noted-viewer-PLATFORM' that corresponds to your operating system from the RELEASE directory. Translation matrix:
 - mas-x64 == Mac OS
 - win32-ia32 == 32bit windows
 - linux-x64 == 64bit linux
 
-* Want one of the other platforms supported by Electron? Setup an Electron.io build environment and execute 'npm run build' from the BBNotedViewer directory
+Want one of the other platforms supported by Electron? Setup an Electron.io build environment and execute 'npm run build' from the BBNotedViewer directory
+
+Do you want to build the Qt version for another platform? Pull down QtCreator for your platform and load the project found in the QT_Version directory.
 
 Open the 'bb-noted-viewer' executable per your operating systems normal procedure (double click on Mac and Windows, ./bb-noted-viewer for linux)
 
