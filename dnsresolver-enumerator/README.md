@@ -15,6 +15,6 @@ domain3.othertld
 ```
 
 Pass the paths to the input files to the program like this:
-dnsresolver -NmapFile=/path/to/nmap.xml -DomainsFile=/path/to/list-of-newline-separated-domains.txt
+`dnsresolver -NmapFile=/path/to/nmap.xml -DomainsFile=/path/to/list-of-newline-separated-domains.txt`
 
 Output is pretty crude right now. Might improve with time if there is any call for it.
