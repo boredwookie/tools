@@ -28,7 +28,7 @@ func main() {
 	var dnsServers []string
 	for _, host := range nmapRun.Host{
 		for _, port := range host.Ports.Port{
-			if port.Portid == "53"{
+			if port.Portid == "53" && port.State.State == "open" {
 				dnsServers = append(dnsServers, host.Address.Addr)
 			}
 		}
