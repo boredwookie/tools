@@ -94,8 +94,10 @@ func main() {
 		}
 	}
 
-	fmt.Print(dnsDifferences)
-	fmt.Println("Done")
+	// JSON Format the differences
+	marshaledDifferences, _ := json.MarshalIndent(dnsDifferences, "", " ")
+	fmt.Print(string(marshaledDifferences))
+	fmt.Println("\nDone")
 }
 
 type DnsResponse struct{
