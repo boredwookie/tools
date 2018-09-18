@@ -3,6 +3,7 @@
 package main
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"flag"
 	"fmt"
@@ -15,6 +16,7 @@ import (
 func main() {
 	nmapFilePath := flag.String("NmapFile", "", "Pass in the full path to the NMAP XML file here")
 	testDomainsPath := flag.String("DomainsFile", "", "Pass in the list of newline-delimited domains that are to be tested")
+	verbose := flag.Bool("Verbose", false, "Pass in 'true' to get more verbose output")
 	flag.Parse()
 
 	// Read in the specified nmap file
@@ -28,7 +30,7 @@ func main() {
 	var dnsServers []string
 	for _, host := range nmapRun.Host{
 		for _, port := range host.Ports.Port{
-			if port.Portid == "53" && port.State.State == "open" {
+			if port.Portid == "53" && port.State.State == "open"{
 				dnsServers = append(dnsServers, host.Address.Addr)
 			}
 		}
@@ -39,10 +41,12 @@ func main() {
 	domainsRaw, _ := ioutil.ReadFile(*testDomainsPath)
 	domains := strings.Split(strings.Replace(string(domainsRaw), "\r", "", -1), "\n")
 
-	fmt.Println("These DNS servers were identified:")
-	fmt.Println(dnsServers)
+	if *verbose {
+		fmt.Println("These DNS servers were identified:")
+		fmt.Println(dnsServers)
 
-	fmt.Println("Testing specified domain names against the dns resolvers")
+		fmt.Println("Testing specified domain names against the dns resolvers")
+	}
 	var responses []DnsResponse
 	for _, dns := range dnsServers{
 		for _, domain := range domains{
@@ -97,7 +101,10 @@ func main() {
 	// JSON Format the differences
 	marshaledDifferences, _ := json.MarshalIndent(dnsDifferences, "", " ")
 	fmt.Print(string(marshaledDifferences))
-	fmt.Println("\nDone")
+
+	if *verbose{
+		fmt.Println("\nDone")
+	}
 }
 
 type DnsResponse struct{
